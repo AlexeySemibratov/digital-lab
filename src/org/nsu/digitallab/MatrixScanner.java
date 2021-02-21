@@ -1,9 +1,6 @@
 package org.nsu.digitallab;
 
 import java.util.Arrays;
-import java.util.function.Predicate;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 /**
  * @author Alexey Semibratov (a.semibratov@g.nsu.ru)
@@ -86,10 +83,10 @@ public class MatrixScanner {
                     }
                     //2. Шаблон не совпал
                     else {
-                        //Тогда стоит подвинуться на еденицу и продолжить поиск в полосе
+                        //Тогда стоит сдвинуться на единицу в столбце и продолжить поиск
                         currentOffset++;
                     }
-                    //В любом случае сбрасываем шаблон на начало
+                    //В любом случае сбрасываем индекс в шаблоне на начало
                     // Также возвращаем индекс строки B, так как могут быть еще шаблоны в оставшейся полосе
                     aRow = 0;
                     bRow = bRowTemp;
